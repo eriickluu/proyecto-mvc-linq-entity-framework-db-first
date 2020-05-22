@@ -29,6 +29,7 @@ namespace AplicacionWeb.Models
         [Display(Name = "Email")]
         public string email { get; set; }
         [Display(Name = "Direccion")]
+        [Required]
         [StringLength(100, ErrorMessage = "Longuitud maxima 200")]
         public string direccion { get; set; }
         [Display(Name = "Sexo")]

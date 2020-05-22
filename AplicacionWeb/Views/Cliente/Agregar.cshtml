@@ -4,6 +4,7 @@
 
 @{
     ViewBag.Title = "Agregar";
+    List<SelectListItem> listaSexo = (List<SelectListItem>)ViewBag.lista;
 }
 
 <h2>Agregar</h2>
@@ -39,7 +40,7 @@
             </div>
             <div>
                 @Html.LabelFor(p => p.idsexo)
-                @Html.TextBoxFor(p => p.idsexo, new { @class = "form-control" })
+                @Html.DropDownList("idsexo", listaSexo, null, new { @class = "form-control" })
                 @Html.ValidationMessage("idsexo", new { @class = "text-danger" })
             </div>
             <div>
