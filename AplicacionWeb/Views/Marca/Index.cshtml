@@ -1,0 +1,33 @@
+﻿@using AplicacionWeb.Models 
+
+@model List<MarcaCLS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Agregar", "Agregar", "Marca", null, new { @class = "btn btn-primary" })
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            @*<td width="10%">Id Marca</td>
+            <td width="30%">Nombre</td>
+            <td width="60%">Descripcion</td>*@
+            <td width="10%">@Html.LabelFor(p => Model[0].idmarca)</td>
+            <td width="30%">@Html.LabelFor(p => Model[0].nombre)</td>
+            <td width="60%">@Html.LabelFor(p => Model[0].descripcion)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.idmarca</td>
+            <td>@item.nombre</td>
+            <td>@item.descripcion</td>
+        </tr>
+        }
+    </tbody>
+</table>

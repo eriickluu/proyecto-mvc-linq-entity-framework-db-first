@@ -1,0 +1,33 @@
+﻿@using AplicacionWeb.Models
+
+@model List<ClienteCLS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>@Html.LabelFor(p => Model[0].idcliente)</td>
+            <td>@Html.LabelFor(p => Model[0].nombre)</td>
+            <td>@Html.LabelFor(p => Model[0].aPaterno)</td>
+            <td>@Html.LabelFor(p => Model[0].aMaterno)</td>
+            <td>@Html.LabelFor(p => Model[0].telefonoFijo)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.idcliente</td>
+            <td>@item.nombre</td>
+            <td>@item.aPaterno</td>
+            <td>@item.aMaterno</td>
+            <td>@item.telefonoFijo</td>
+        </tr>
+        }
+    </tbody>
+</table>
