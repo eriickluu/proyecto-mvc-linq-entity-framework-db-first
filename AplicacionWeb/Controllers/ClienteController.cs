@@ -30,5 +30,10 @@ namespace AplicacionWeb.Controllers
 
             return View(listaCliente);
         }
+
+        public ActionResult Agregar()
+        {
+            return View();
+        }
     }
 }

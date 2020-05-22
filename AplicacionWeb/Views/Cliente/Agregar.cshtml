@@ -1,0 +1,61 @@
+﻿@using AplicacionWeb.Models
+
+@model ClienteCLS
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Agregar", "Cliente", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(p => p.nombre)
+                @Html.TextBoxFor(p => p.nombre, new { @class = "form-control" })
+                @Html.ValidationMessage("nombre", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.aPaterno)
+                @Html.TextBoxFor(p => p.aPaterno, new { @class = "form-control" })
+                @Html.ValidationMessage("aPaterno", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.aMaterno)
+                @Html.TextBoxFor(p => p.aMaterno, new { @class = "form-control" })
+                @Html.ValidationMessage("aMaterno", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.email)
+                @Html.TextBoxFor(p => p.email, new { @class = "form-control" })
+                @Html.ValidationMessage("email", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.direccion)
+                @Html.TextBoxFor(p => p.direccion, new { @class = "form-control" })
+                @Html.ValidationMessage("direccion", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.idsexo)
+                @Html.TextBoxFor(p => p.idsexo, new { @class = "form-control" })
+                @Html.ValidationMessage("idsexo", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.telefonoFijo)
+                @Html.TextBoxFor(p => p.telefonoFijo, new { @class = "form-control" })
+                @Html.ValidationMessage("telefonoFijo", new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(p => p.telefonoCelular)
+                @Html.TextBoxFor(p => p.telefonoCelular, new { @class = "form-control" })
+                @Html.ValidationMessage("telefonoCelular", new { @class = "text-danger" })
+            </div>
+            <br />
+            <div style="margin:auto">
+                <input type="submit" class="btn btn-primary" value="Guardar" />
+            </div>
+        }
+    </div>
+</div>
